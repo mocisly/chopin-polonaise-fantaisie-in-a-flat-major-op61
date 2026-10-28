@@ -581,6 +581,7 @@ bbbStart = { \set stemLeftBeamCount = #0 \set stemRightBeamCount = #3 }
 bEnd = { \set stemLeftBeamCount = #1 \set stemRightBeamCount = #0 }
 bMid = { \set stemLeftBeamCount = #1 \set stemRightBeamCount = #1 }
 bToTwo = { \set stemLeftBeamCount = #1 \set stemRightBeamCount = #2 }
+bFromTwo = { \set stemLeftBeamCount = #2 \set stemRightBeamCount = #1 }
 bbEnd = { \set stemLeftBeamCount = #2 \set stemRightBeamCount = #0 }
 bbMid = { \set stemLeftBeamCount = #2 \set stemRightBeamCount = #2 }
 bbToThree = { \set stemLeftBeamCount = #2 \set stemRightBeamCount = #3 }
@@ -1386,15 +1387,15 @@ notesOne = \absolute {
   \bStart <c' es' as'>8 [ \=305) \centerRest r16 \bbEnd \refSlur #307 #'((5.75669 9.13525 0.13701 2.77917 0.83701 2.77916)) <es' es''>16 ] ^\=307( \bStart <as' as''>8. [ \bbEnd <bes' bes''>16 ] \bStart <c'' c'''>8. [ \bbEnd <f'' f'''>16 ] \=307) | % 268
   \bStart <es'' es'''>8. [ \bbEnd \refSlur #308 #'((6.9 6.4 0.15599 6.48669 0.85599 6.48668)) <g'' g'''>16 ] ^\=308( \bStart <as'' as'''>8. [ \bbEnd <bes'' bes'''>16 ] \bStart <c''' c''''>8. [ \bbEnd <f''' f''''>16 ] | % 269
   \bStart <es''' es''''>8. [ \bbEnd <c''' c''''>16 ] \bStart <bes'' bes'''>8. [ \bbEnd <c''' c''''>16 ] \bStart <bes'' bes'''>8. [ \bbEnd <as'' as'''>16 ] | % 270
-  \bStart <f'' f'''>8. [ \bbEnd <es'' es'''>16 ] \bStart <c'' c'''>8. [ \bbEnd <as' as''>16 ] \bStart <f' f''>8 [ \=308) \restAt #6 r16 \bbEnd c'16 ] | % 271
+  \bStart <f'' f'''>8. [ \bbEnd <es'' es'''>16 ] \bStart <c'' c'''>8. [ \bbEnd <as' as''>16 ] \beamAt #6.015 #4.750 \bStart <f' f''>8 [ \=308) \restAt #6 r16 \bbEnd c'16 ] | % 271
   es'8 -> \centerRest r16 \bbStart g'16 [ \bMid \refSlur #309 #'((4.47931 4.232 0.15021 3.50003 0.85021 3.50003)) bes'8. ^\=309( \bToTwo c''16 \bMid des''8. \bbEnd f''16 ] | % 272
   \bStart es''8. [ \bToTwo c''16 \bMid bes'8. \bToTwo c''16 \bMid bes'8. \bbEnd as'16 ] \=309) | % 273
   es'8 -> \centerRest r16 \bbStart g'16 [ \bMid bes'8. \bToTwo c''16 \bMid des''8. \bbEnd f''16 ] | % 274
   \bStart es''8. [ \bToTwo c''16 \bMid bes'8. \bToTwo c''16 \bMid bes'8. \bbEnd as'16 ] | % 275
   es'8 -> \centerRest r16 \bbStart \refSlur #316 #'((4.15618 4.60364 0.14972 3.50006 0.84972 3.50006) (5.39216 5.39216 0.15 7.29844 0.85 7.29844) (6.482 6.482 0.15 2.92511 0.85 2.92511)) g'16 [ ^\=316( \bMid bes'8. \bToTwo c''16 \bMid des''8. \bbEnd f''16 ] | % 276
   \bStart es''8. [ \bToTwo c''16 \bMid bes'8. \bToTwo c''16 \bMid bes'8. \bbEnd as'16 ] | % 277
-  \bStart c''8 [ \restAt #2 r16 \bToTwo as'16 \bMid f'8 \restAt #2 r16 \bToTwo g'16 \bMid f'8 \restAt #2 r16 \bbEnd es'16 ] | % 278
-  \bStart as'8 [ \restAt #2 r16 \bToTwo f'16 \bMid es'8 \restAt #2 r16 \bToTwo f'16 \bMid es'8 \restAt #2 r16 \bbEnd c'16 ] | % 279
+  \beamAt #4.476 #3.223 \bStart c''8 [ \restAt #2 r16 \bFromTwo as'16 \bMid f'8 \restAt #2 r16 \bFromTwo g'16 \bMid f'8 \restAt #2 r16 \bbEnd es'16 ] | % 278
+  \beamAt #4.055 #2.801 \bStart as'8 [ \restAt #2 r16 \bFromTwo f'16 \bMid es'8 \restAt #2 r16 \bFromTwo f'16 \bMid es'8 \restAt #2 r16 \bbEnd c'16 ] | % 279
   \bStart <as c'>8*2/3 [ \bMid c'8*2/3 \bEnd <g c'>8*2/3 ] \bStart <as c'>8*2/3 [ \bMid c'8*2/3 \bEnd <f c'>8*2/3 ] \bStart <as c'>8*2/3 [ \bMid c'8*2/3 \bEnd <g c'>8*2/3 ] | % 280
   \bStart <as c'>8*2/3 [ \bMid c'8*2/3 \bEnd <g c'>8*2/3 ] \bStart <as c'>8*2/3 [ \bMid c'8*2/3 \bEnd <f c'>8*2/3 ] \bStart <as c'>8*2/3 [ \bMid c'8*2/3 \bEnd <g c'>8*2/3 ] \=316) | % 281
   \refSlur #318 #'((5.125 5.125 0.15 3.48522 0.85 3.48522)) <ges! c'>2. -> ^\=318( | % 282
@@ -1959,8 +1960,8 @@ notesFive = \absolute {
   \bStart <es c'>8. [ \bToTwo <es c'>16 \bMid <es c'>8. \bToTwo <es c'>16 \bMid <es c'>8. \bbEnd <es c'>16 ] | % 275
   \stemUp <es,, es,>8 \centerRest r8 \stemDown \bStart <es des'>8. [ \bToTwo <es des'>16 \bMid <es des'>8. \bbEnd <es des'>16 ] | % 276
   \bStart <es des'>8. [ \bToTwo <es des'>16 \bMid <es des'>8. \bToTwo <es des'>16 \bMid <es des'>8. \bbEnd <as, es>16 ] | % 277
-  \bStart <as, es>8 [ \centerRest r16 \bToTwo <as, es>16 \bMid <as, es>8 \centerRest r16 \bToTwo <as, es>16 \bMid <as, es>8 \centerRest r16 \bbEnd <as, es>16 ] | % 278
-  \stemUp \bStart <as, es>8 [ \centerRest r16 \bToTwo <as, es>16 \bMid <as, es>8 \centerRest r16 \bToTwo <as, es>16 \bMid <as, es>8 \centerRest r16 \bbEnd <as, es>16 ] | % 279
+  \bStart <as, es>8 [ \centerRest r16 \bFromTwo <as, es>16 \bMid <as, es>8 \centerRest r16 \bFromTwo <as, es>16 \bMid <as, es>8 \centerRest r16 \bbEnd <as, es>16 ] | % 278
+  \stemUp \bStart <as, es>8 [ \centerRest r16 \bFromTwo <as, es>16 \bMid <as, es>8 \centerRest r16 \bFromTwo <as, es>16 \bMid <as, es>8 \centerRest r16 \bbEnd <as, es>16 ] | % 279
   \bStart <as, es>8 [ \centerRest r16 \bToTwo <es, es>16 \bMid <as, es>8 \centerRest r16 \bToTwo <es, es>16 \bMid <as, es>8 \centerRest r16 \bbEnd <es, es>16 ] | % 280
   \bStart <as, es>8 [ \centerRest r16 \bToTwo <es, es>16 \bMid <as, es>8 \centerRest r16 \bToTwo <es, es>16 \bMid <as, es>8 \centerRest r16 \bbEnd <es, es>16 ] | % 281
   \override TrillSpanner.direction = #UP
